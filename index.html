@@ -3,14 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>bitsy to bipsi</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<h1>convert bitsy to bipsi</h1>
-<label>
-    <div>bitsy project</div>
-    <input id="input-bitsy" type="file" accept=".bitsy" title="bitsy project">
-</label>
-<button id="generate">generate bipsi</button>
+<main>
+    <h1>convert bitsy to bipsi</h1>
+    <label>
+        <div>bitsy project:</div>
+        <input id="input-bitsy" type="file" accept=".bitsy" title="bitsy project">
+    </label>
+    <button id="generate">generate bipsi</button>
+    <div class="container">
+        <div>
+            <h2>it can convert:</h2>
+            <ul>
+                <li>tiles</li>
+                <li>palettes</li>
+                <li>rooms</li>
+                <li>exits &amp; entrances</li>
+                <li>sprites</li>
+                <li>items</li>
+                <li>basic dialogue</li>
+                <li>endings</li>
+            </ul>
+        </div>
+        <div>
+            <h2>but it will ignore:</h2>
+            <ul>
+                <li>dialogue scripting</li>
+                <li>variables</li>
+                <li>room transitions</li>
+                <li>audio</li>
+                <li>hacks</li>
+            </ul>
+        </div>
+    </div>
+</main>
 <script src="./src/browser.js" type="module"></script>
 </body>
 </html>

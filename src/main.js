@@ -11,7 +11,6 @@ export async function bitsyToBipsi(text)
     const REUSE_EXISTING_EVENTS = false;
 
     // TODO: Handle importing HTML Bitsy playable
-    // TODO: Handle exits with dialogue
     // TODO: Handle dialogue markup including exits/ends and text styling
 
     const world = parseWorld(text);
@@ -151,14 +150,23 @@ export async function bitsyToBipsi(text)
 
         for (const exit of sourceRoom.exits)
         {
-            destRoom.events.push({
+            const event = {
                 position: [exit.x, exit.y],
                 fields: [{
                     key: "exit", type: "location", data: {
                         room: rooms.findIndex(room => room.id === exit.dest.room), position: [exit.dest.x, exit.dest.y]
                     }
                 }]
-            });
+            };
+
+            if (exit.dlg)
+            {
+                event.fields.push(
+                    {key: "say", type: "dialogue", data: getDialogue(exit.dlg)}
+                );
+            }
+            
+            destRoom.events.push(event);
         }
 
         // Convert endings
