@@ -1,15 +1,20 @@
 # bitsy-to-bipsi
 
-To install dependencies:
+converts a bitsy project into a bipsi project
 
-```bash
-bun install
-```
+**it can convert:**
+- tiles
+- palettes
+- rooms
+- exits & entrances
+- sprites
+- items
+- basic dialogue
+- endings
 
-To run:
-
-```bash
-bun run index.js
-```
-
-This project was created using `bun init` in bun v1.1.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+**but it will ignore:**
+- dialogue scripting
+- variables
+- room transitions
+- audio
+- hacks
