@@ -7,6 +7,10 @@ body {
     height: calc(var(--vh, 1vh) * 100);
 
     display: flex;
+
+    font-family: sans-serif;
+    background: #252528;
+    color: white;
 }
 
 h1, h2 {
@@ -19,7 +23,7 @@ main {
     align-self: center;
     flex-direction: column;
     width: 25rem;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: auto;
 }
 
@@ -37,9 +41,14 @@ label > * {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .label > * {
     flex-grow: 1;
+}
+
+button {
+    margin: auto;
+    padding: 0.5rem 1rem;
 }
